@@ -12,5 +12,5 @@ const teacherSchema = new Schema<ITeacher>({
     totalPoint: { type: Number, default: 0 }
 }, { timestamps: true });
 
-const teacherModel = model<ITeacher>("Teacher", teacherSchema);
-export default teacherModel;
+const Teacher = model<ITeacher>("Teacher", teacherSchema);
+export default Teacher;

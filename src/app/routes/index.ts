@@ -3,6 +3,7 @@ import { UserRoutes } from '../modules/user/user.route';
 
 import { AdminRoutes } from '../modules/admin/admin.route';
 import { AuthRoutes } from '../modules/Auth/auth.route';
+import { chatRoutes } from '../modules/chat/chat.routes';
 
 const router = Router();
 
@@ -18,6 +19,10 @@ const moduleRoutes = [
   {
     path: '/admin',
     route: AdminRoutes,
+  },
+  {
+    path: '/chats',
+    route: chatRoutes,
   },
 ];
 

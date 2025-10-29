@@ -2,6 +2,7 @@ import { Server } from 'http';
 import mongoose from 'mongoose';
 import config from './app/config';
 import app from './app';
+import { initSocket } from './app/utils/socket';
 let server: Server;
 
 async function main() {
@@ -13,6 +14,8 @@ async function main() {
     server = app.listen(config.port, () => {
       console.log(`App listening on port ${config.port}`);
     });
+    initSocket(server);
+    console.log('✅ Socket.io initialized');
   } catch (error) {
     console.error('Error connecting to the database:', error);
   }

@@ -12,5 +12,5 @@ const studentSchema = new Schema<IStudent>({
     totalPoint: { type: Number, default: 0 }
 }, { timestamps: true });
 
-const studentModel = model<IStudent>("Student", studentSchema);
-export default studentModel;
+const Student = model<IStudent>("Student", studentSchema);
+export default Student;
